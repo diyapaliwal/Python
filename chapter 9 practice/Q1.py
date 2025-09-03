@@ -9,11 +9,11 @@ Like a diamond in the sky
 Twinkle, twinkle little star
 
 How I wonder what you are'''
-f = open("poems.txt","w")
+f = open("Q1_poems.txt","w")
 f.write(st)
 f.close()
 
-with open("poems.txt") as f:
+with open("Q1_poems.txt") as f:
     poem= f.read()
     if "twinkle" in poem.lower() :
         print("Yes!")
