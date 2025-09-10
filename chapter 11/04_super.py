@@ -10,7 +10,7 @@ class programmer(employee):
     
 class manager(programmer):
     def __init__(self):
-        super().__init__()
+        super().__init__() # inherits the constructor of its parent class
         print("constructor of manager")
     c= 3
     
