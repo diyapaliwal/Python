@@ -5,3 +5,4 @@ print(table)
 
 with open("chapter 12 practice/Tables.txt","a") as f:
     f.write(f"Table of {n}:{str(table)} \n")
+    f.write("\n")
