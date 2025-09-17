@@ -1,2 +1,1 @@
-)
-print(b.shape)
+3,2
