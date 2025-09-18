@@ -1,0 +1,4 @@
+pandas is a python library build on top of numpy.
+Used in fields like data analysis, data science and machine learning.
+Pandas stands for "Panel Data".
+We use pandas to work on seires and data frames.
