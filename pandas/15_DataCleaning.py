@@ -6,23 +6,25 @@ import pandas as pd
 df = pd.read_csv("pandas\data.csv")
 
 # 1. Drop irrelevant columns
-# df = df.drop(columns=["Legendary","No","Height"]) 
+df = df.drop(columns=["Legendary","No","Height"]) 
+print(df)
 
+df2 = pd.read_csv("pandas\data.csv")
 # 2. Handle missing data
 # dropna means Drop Not Available
-df = df.dropna(subset=["Type2"])
-df = df.fillna({"Type2":"None"})
+df2 = df2.dropna(subset=["Type2"])
+df2 = df2.fillna({"Type2":"None"})
 
 # 3. Fix Inconsistent Values
 
-df["Type1"] = df["Type1"].replace({"Grass":"GRASS", "Fire":"FIRE", "Water":"WATER"})
+df2["Type1"] = df2["Type1"].replace({"Grass":"GRASS", "Fire":"FIRE", "Water":"WATER"})
 
 # 4. Standardize text
-df["Name"] = df["Name"].str.lower()
+df2["Name"] = df2["Name"].str.lower()
 
 # 5. Fix data types
-df["Legendary"] = df["Legendary"].astype(bool)
+df2["Legendary"] = df2["Legendary"].astype(bool)
 
 # 6. Remove duplicate values
-df = df.drop_duplicates()
-print(df.to_string())
+df2 = df2.drop_duplicates()
+print(df2.to_string())
